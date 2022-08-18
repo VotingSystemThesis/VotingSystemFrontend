@@ -1,0 +1,42 @@
+<app-nav>
+  <div class="profile-container-header">
+    <h1> INGRESAR EXAMEN PATOLOGICO DEL PACIENTE </h1>
+  </div>
+
+  <div class="profile-container-content">
+
+    <div class="form-group">
+
+      <form (submit)="patologiaData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese la fecha del examen
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 matInput required="fecha_examen" name="fecha_examen" type="date" [(ngModel)]="patologiaData.fechaExamen" placeholder="FechaExamen">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="patologiaData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese el nombre del examen tomado
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 matInput required="Examen" name="Examen" type="text" [(ngModel)]="patologiaData.nombreExamen" placeholder="Examen">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="patologiaData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese el resultado del examen
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 matInput required="Resultado" name="Resultado" type="text" [(ngModel)]="patologiaData.restultado" placeholder="Resultado">
+        </mat-form-field>
+      </form>
+
+      <button class="btn-option"  mat-stroked-button color="primary" (click)="addPatologia()" [routerLink]="['/usuario',usuarioId, 'ingreso',ingresoId ]"> Ingresar Examen Patologico </button>
+
+    </div>
+
+  </div>
+</app-nav>

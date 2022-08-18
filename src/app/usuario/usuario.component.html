@@ -1,0 +1,15 @@
+<app-nav>
+<div class="jobs_container">
+  <h1> Lista de Pacientes Ingresados </h1>
+  <div class="filter-jobs">
+      <div *ngFor="let ingresantes of ingresos" class="postulation-item" [routerLink]="['/usuario',usuarioId,'ingreso',ingresantes.ingresosId]">
+        <div class="filter-jobs-container-item">
+          <span>Paciente: {{ingresantes.nombrePacientes}}  {{ingresantes.apellidoPacientes}} </span>
+          <h2> Condicion del Paciente: {{ingresantes.condicion}} </h2>
+          <span>Historia Clinica: {{ingresantes.numeroHistorialClinicoPacientes}}</span>
+        </div>
+      </div>
+  </div>
+</div>
+</app-nav>
+

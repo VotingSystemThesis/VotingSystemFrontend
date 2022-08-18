@@ -1,0 +1,15 @@
+<app-nav>
+  <div class="jobs_container">
+    <h1> Lista de Examenes del Paciente </h1>
+    <div class="filter-jobs">
+      <div *ngFor="let patologias of patologia" class="postulation-item" [routerLink]="['/usuario',usuarioId, 'ingreso',ingresoId ]">
+        <div class="filter-jobs-container-item">
+          <span>Nombre del Examen: {{patologias.nombreExamen}} </span>
+          <h2> Resultado: {{patologias.restultado}} </h2>
+          <span>Fecha del examen: {{patologias.fechaExamen}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</app-nav>
+

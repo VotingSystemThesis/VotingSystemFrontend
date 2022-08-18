@@ -1,0 +1,36 @@
+<div style="position: relative;">
+  <div>
+    <img src="assets/images/personavotando.jpg" class='heaven'/>
+    <img src="assets/images/logo.png" class="eye"/>
+  </div>
+</div>
+
+<div style="position: absolute; left: 75%">
+  <form class="custom-form" method="post">
+    <h1> Login </h1>
+
+    <h5> DNI </h5>
+    <input
+      type="number"
+      matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher"
+      [(ngModel)]="dniexist"
+      name="DNI"
+      placeholder="Ingrese dni"
+      required="required"
+    />
+
+    <h5> Fecha de emisión </h5>
+    <input
+      type="date"
+      matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher"
+      [(ngModel)]="dniexist"
+      name="Fecha de emisión"
+      placeholder="Fecha de emisión"
+      required="required"
+    />
+    <br>
+    <button (click)="getAllUsers()" class="btn-ingresar" mat-raised-button color="primary">Siguiente</button>
+  </form>
+</div>
+
+

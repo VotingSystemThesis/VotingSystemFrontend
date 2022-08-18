@@ -1,0 +1,33 @@
+.text{
+  text-align: center;
+  color: #96c3ea;
+  margin-top: 25px;
+  font-family: Verdana;
+}
+
+.text-data{
+  text-align: center;
+  color: #703cda;
+  margin-top: 56px;
+  font-family: Verdana;
+}
+
+.mat-button{
+   margin: 40px auto;
+   width: 280px;
+   background-color: #1955AE;
+   color: white;
+   display: block;
+   padding: 5px 30px 5px 30px;
+   text-align: center;
+ }
+
+.mat-button-approved{
+  margin: 40px auto;
+  width: 280px;
+  background-color: #5456e3;
+  color: white;
+  display: block;
+  padding: 5px 30px 5px 30px;
+  text-align: center;
+}
