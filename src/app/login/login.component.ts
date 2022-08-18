@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {LoginApiService} from "../services/login-api.service";
 import {ErrorStateMatcher} from "@angular/material/core";
 import {FormControl, FormGroupDirective, NgForm, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
@@ -25,7 +24,7 @@ export class LoginComponent implements OnInit {
   validador=false
   ingresante!:number;
 
-  constructor(private usuarioApi: LoginApiService,
+  constructor(
               private router: Router) { }
 
   ngOnInit(): void {
@@ -42,6 +41,7 @@ export class LoginComponent implements OnInit {
 
 
   getAllUsers():void{
+    /*
     this.usuarioApi.getAll().subscribe((response: any) =>{
       console.log('Se Cargaron todos los usuarios', response.content)
 
@@ -64,6 +64,8 @@ export class LoginComponent implements OnInit {
       }
       console.clear();
     })
+
+     */
   }
   matcher = new MyErrorStateMatcher();
 }
