@@ -1,24 +1,33 @@
+img{
+  border-radius: 8px;
+}
+
 .aliniamiento{
   display: flex;
-  margin: 10px;
-  padding: 20px;
+}
+
+.contenido{
+  max-width: 70%;
 }
 
 .logo{
-  display: block;
-  margin: 3px 4.5em;
+  margin: 1em 6em;
   min-width: 15%;
   max-width: 25%;
 }
 
+.posicionamiento{
+  top: 100px;
+  left: 8%;
+}
+
 .centrarTexto {
-  padding: 0;
   text-align: center;
 }
 
 .custom-form {
   min-width: 250px;
-  max-width: 15%;
+  max-width: 300px;
   background: rgba(255, 255, 255, 0.15);
   padding: 2rem 3rem;
   border-radius: 2.5rem;
@@ -39,6 +48,13 @@
   border-radius: 1.5rem;
   box-shadow: 3px 3px 8px #b1b1b1, -3px -3px 8px #ffffff;
   cursor: pointer;
+}
+
+#div2{
+  position: absolute;
+  left: 15%;
+  max-width: 200%;
+  height: 700px;
 }
 
 

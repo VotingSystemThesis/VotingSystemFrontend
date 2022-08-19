@@ -1,32 +1,36 @@
-<div style="position: relative;">
-  <div>
-    <img src="assets/images/personavotando.jpg" class='heaven'/>
-    <img src="assets/images/logo.png" class="eye"/>
+<div>
+  <div style="position: relative;">
+    <div>
+      <img src="assets/images/personavotando.jpg" class='heaven'/>
+      <img src="assets/images/logo.png" class="eye"/>
+    </div>
+  </div>
+
+  <div style="position: absolute; left: 75% ">
+    <form class="custom-form" method="post">
+      <h1> Login </h1>
+      <h5> DNI </h5>
+      <input
+        type="number"
+        name="DNI"
+        placeholder="Ingrese dni"
+        required="required"
+      />
+
+      <h5> Fecha de emisión </h5>
+      <input
+        type="date"
+        name="Fecha de emisión"
+        placeholder="Fecha de emisión"
+        required="required"
+      />
+      <br>
+      <button [routerLink]="['/verificacion']"  class="btn-ingresar" mat-raised-button color="primary">Siguiente </button>
+    </form>
   </div>
 </div>
 
-<div style="position: absolute; left: 75%">
-  <form class="custom-form" method="post">
-    <h1> Login </h1>
 
-    <h5> DNI </h5>
-    <input
-      type="number"
-      name="DNI"
-      placeholder="Ingrese dni"
-      required="required"
-    />
 
-    <h5> Fecha de emisión </h5>
-    <input
-      type="date"
-      name="Fecha de emisión"
-      placeholder="Fecha de emisión"
-      required="required"
-    />
-    <br>
-    <button [routerLink]="['/inicio']"  class="btn-ingresar" mat-raised-button color="primary">Siguiente </button>
-  </form>
-</div>
 
 
