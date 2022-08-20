@@ -17,6 +17,9 @@ $cardColor: white;
   justify-content: center;
 }
 @mixin title {
+  h3 {
+    font-family: $titleFont;
+  }
   h1 {
     font-family: $titleFont;
     font-size: 2.5rem;
@@ -191,7 +194,7 @@ $cardColor: white;
 
 @mixin paragraph() {
   p {
-    font-family: "Thasadith", sans-serif;
+    font-family: $titleFont;
     font-size: 2rem;
     word-break: normal;
     text-align: center;

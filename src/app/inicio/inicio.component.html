@@ -1,36 +1,27 @@
-<div class="aliniamiento contenido">
-  <div class="posicionamiento" style="position: relative">
-    <img src="assets/images/logo.png" class="logo" />
-    <h1>Sistema de Votacion</h1>
-
-    <form class="custom-form centrarTexto" method="post">
+<div class="main-container">
+  <div class="left-container">
+    <div class="title">
+      <img src="assets/images/logo.png" class="logo" />
+      <h1>VotingSystem</h1>
+    </div>
+    <div class="form-container mat-elevation-z4">
       <h1>Verifica tus datos</h1>
-      <button
-        [routerLink]="['/verificacion']"
-        class="btn-ingresar"
-        mat-raised-button
-        color="primary"
-      >
-        Huella Dactilar <img src="assets/images/huellaicon.png" />
+      <button class="mat-elevation-z4">
+        HUELLA DACTILAR <mat-icon>fingerprint</mat-icon>
       </button>
       <h1>o</h1>
-      <button
-        [routerLink]="['/verificacion']"
-        class="btn-ingresar"
-        mat-raised-button
-        color="primary"
-      >
-        Codigo de Barras <img src="assets/images/camaraicon.png" />
+      <button class="mat-elevation-z4">
+        HUELLA DACTILAR <mat-icon> photo_camera </mat-icon>
       </button>
-    </form>
+    </div>
   </div>
 
-  <div id="div2" class="centrarTexto" style="position: relative; top: 150px">
+  <div class="right-container">
     <h1>Bienvenido a VotingSystem</h1>
-    <h3>
+    <p>
       Es necesario validar la autenticidad de la persona. Para <br />
       ello se utilizará su huella dactilar y/o su DNI en físico.
-    </h3>
-    <img src="assets/images/HuellaLogo.png" />
+    </p>
+    <img src="assets/images/HuellaLogo.png" class="mat-elevation-z6" />
   </div>
 </div>
