@@ -1,0 +1,98 @@
+@import "src/assets/styles/styles.scss";
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  @include title();
+
+  display: flex;
+  .left-container {
+    height: 100vh;
+    background-image: url("../../assets/images/personavotando.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 72%;
+    z-index: 1;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    .left-main-container {
+      width: 72%;
+      position: absolute;
+      top: 0;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 250px;
+          height: 250px;
+        }
+        h1 {
+          text-align: center;
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+    .left-second-container {
+      height: 100vh;
+      background-color: $mainBackgroundColor;
+      opacity: 0.7;
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      width: 100%;
+    }
+  }
+  .right-container {
+    height: 100vh;
+    right: 0;
+    position: fixed;
+    background-color: $secondBackgroundColor;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @include form-controller(
+      (
+        Properties: (
+          border-color: rgb(195, 21, 21),
+          height: 30px,
+          radius: 40px,
+        ),
+      )
+    );
+    h1 {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    * {
+      margin-left: 10%;
+    }
+    .form-container {
+      * {
+        margin: 0;
+      }
+      .form-controller {
+        margin-bottom: 15px;
+      }
+      width: 55%;
+      height: 30%;
+      background-color: $cardColor;
+      border-radius: 44px;
+      padding: 5%;
+      @include button();
+      form {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+    }
+  }
+}
