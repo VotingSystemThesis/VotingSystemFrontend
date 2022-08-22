@@ -1,22 +1,32 @@
-<mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-               mode="over">
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar>
-      <div class="user-icon">
-        <img src="assets/images/logo.png" width="50px">
-      </div>
-      <span class="default-spacer"></span>
-      <div class="texto">
-        <h2> HOME   </h2>
-        <h2> VOTACIONES PASADAS   </h2>
-        <h2> PERFIL </h2>
-      </div>
+<div class="main-container">
+  <div class="mat-card bordeCard">
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #drawer class="sidenav" fixedInViewport
+                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                   mode="over">
+      </mat-sidenav>
 
-    </mat-toolbar>
-    <ng-content>
-    </ng-content>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+      <mat-sidenav-content>
+        <mat-toolbar style="height: max-content">
+          <div class="logo">
+            <img src="../../assets/images/logo.png" alt="" />
+            <h1>VotingSystem</h1>
+          </div>
+          <span class="default-spacer"></span>
+
+          <div class="texto">
+            <ul>
+              <li> HOME </li>
+              <li> VOTACIONES PASADAS </li>
+              <li> PERFIL </li>
+            </ul>
+          </div>
+
+        </mat-toolbar>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+
+</div>
+
+

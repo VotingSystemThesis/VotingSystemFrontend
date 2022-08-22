@@ -1,0 +1,68 @@
+@import "src/assets/styles/styles.scss";
+
+.main-container {
+  background: #e1e4fd;
+  .mat-card:not([class*=mat-elevation-z]) {
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 0 2px 1px -1px rgb(255, 255, 255),
+    0 1px 1px 0 rgb(255, 255, 255),
+    0 1px 3px 0 rgb(255, 255, 255);
+  }
+
+  .bordeCard{
+    border-radius: 4em;
+    border-width: 0.1em;
+  }
+
+  .sidenav-container {
+    height: max-content;
+    border-radius: 4em;
+    border-width: 0.1em;
+  }
+
+  .sidenav {
+    width: max-content;
+    background: #1955AE;
+  }
+
+  .mat-toolbar{
+    background: white;
+    color: black;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img {
+      margin-top: 20px;
+      width: 45px;
+      height: 45px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: x-small;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .default-spacer {
+    flex: 1 1 max-content;
+  }
+
+  li{
+    display:inline;
+    padding-left:35px;
+    padding-right:3px;
+  }
+
+  .texto{
+    position: absolute;
+    left: 35%;
+  }
+
+}

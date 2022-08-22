@@ -1,0 +1,24 @@
+@import "src/assets/styles/styles.scss";
+
+.main-container {
+  background: #e1e4fd;
+
+  .centrar{
+    height: 87.7vh;
+    background-position: center;
+    width: 72%;
+    .centrar-container {
+      width: 72%;
+      position: absolute;
+      top: 0;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      img{
+        border-radius: 30px;
+      }
+    }
+  }
+}
