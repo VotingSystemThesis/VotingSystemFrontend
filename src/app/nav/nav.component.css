@@ -1,0 +1,32 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 300px;
+  background: #1955AE;
+}
+
+.mat-toolbar{
+  background: #1955AE;
+  color: white;
+
+}
+
+.default-spacer {
+  flex: 1 1 max-content;
+}
+.user-icon{
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8em;
+}
+
+.texto{
+  color: black;
+  display: flex;
+  position: absolute;
+  margin-left: 40%;
+}

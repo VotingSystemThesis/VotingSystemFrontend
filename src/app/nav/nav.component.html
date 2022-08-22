@@ -1,0 +1,22 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               mode="over">
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <div class="user-icon">
+        <img src="assets/images/logo.png" width="50px">
+      </div>
+      <span class="default-spacer"></span>
+      <div class="texto">
+        <h2> HOME   </h2>
+        <h2> VOTACIONES PASADAS   </h2>
+        <h2> PERFIL </h2>
+      </div>
+
+    </mat-toolbar>
+    <ng-content>
+    </ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

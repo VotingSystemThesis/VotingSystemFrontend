@@ -15,10 +15,11 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './inicio/inicio.component';
-import { CustomMaterialModule } from './material.module';
+import { HomeComponent } from './home/home.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InicioComponent],
+  declarations: [AppComponent, LoginComponent, InicioComponent, HomeComponent, NavComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -27,8 +28,13 @@ import { CustomMaterialModule } from './material.module';
     RouterModule,
     ReactiveFormsModule,
     MatListModule,
-    CustomMaterialModule,
     BrowserAnimationsModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatCardModule,
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
