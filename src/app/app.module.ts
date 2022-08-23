@@ -14,14 +14,23 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InicioComponent } from './inicio/inicio.component';
+import { InicioComponent } from './authinicio/inicio.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import {MatGridListModule} from "@angular/material/grid-list";
+import { MatGridListModule } from '@angular/material/grid-list';
+import { VotingCardComponent } from './common/voting-card/voting-card.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InicioComponent, HomeComponent, NavComponent, PerfilComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    InicioComponent,
+    HomeComponent,
+    NavComponent,
+    PerfilComponent,
+    VotingCardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -37,7 +46,7 @@ import {MatGridListModule} from "@angular/material/grid-list";
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

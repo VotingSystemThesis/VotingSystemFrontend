@@ -1,46 +1,11 @@
-<div class="main-container">
-  <div class="mat-card bordeCard">
-    <mat-sidenav-container class="sidenav-container">
-      <mat-sidenav #drawer fixedInViewport
-                   [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-                   mode="over">
-      </mat-sidenav>
-
-      <mat-sidenav-content>
-        <mat-toolbar style="height: max-content">
-          <div class="logo">
-            <a href="/home">
-              <img src="../../assets/images/logo.png" alt="" />
-            </a>
-            <h1>VotingSystem</h1>
-          </div>
-          <span class="default-spacer"></span>
-
-          <div class="texto">
-            <ul>
-              <li>
-                <a href="/home">
-                  HOME
-                </a>
-              </li>
-              <li>
-                <a href="/verificacion">
-                  VOTACIONES PASADAS
-                </a>
-              </li>
-              <li>
-                <a href="/perfil">
-                  PERFIL
-                </a>
-              </li>
-            </ul>
-          </div>
-
-        </mat-toolbar>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
+<div class="navbar-container">
+  <div class="logo" routerLink="/home">
+    <img src="../../assets/images/logo.png" alt="" />
+    <h1>VotingSystem</h1>
   </div>
-
+  <div class="menu">
+    <h1 routerLink="/home">Home</h1>
+    <h1 routerLink="/heroes">Votaciones Pasadas</h1>
+    <h1 routerLink="/perfil">Perfil</h1>
+  </div>
 </div>
-
-

@@ -1,24 +1,24 @@
 @import "src/assets/styles/styles.scss";
 
-.main-container {
+.main-background {
   background: $mainBackgroundColor;
-
-  .centrar{
-    height: 87.7vh;
-    background-position: center;
-    width: 72%;
-    .centrar-container {
-      width: 72%;
-      position: absolute;
-      top: 0;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      img{
-        border-radius: 30px;
-      }
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include title();
+  @include paragraph();
+  .welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    p {
+      margin-top: 0px;
+    }
+    h1 {
+      margin-bottom: 0px;
     }
   }
 }
