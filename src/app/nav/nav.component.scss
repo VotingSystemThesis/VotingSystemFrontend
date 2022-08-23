@@ -1,7 +1,8 @@
 @import "src/assets/styles/styles.scss";
 
 .main-container {
-  background: #e1e4fd;
+  width: 100vw;
+  background: $mainBackgroundColor;
   .mat-card:not([class*=mat-elevation-z]) {
     margin-left: 15px;
     margin-right: 15px;

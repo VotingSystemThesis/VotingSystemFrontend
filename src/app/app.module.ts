@@ -17,9 +17,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InicioComponent } from './inicio/inicio.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
+import { PerfilComponent } from './perfil/perfil.component';
+import {MatGridListModule} from "@angular/material/grid-list";
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, InicioComponent, HomeComponent, NavComponent],
+  declarations: [AppComponent, LoginComponent, InicioComponent, HomeComponent, NavComponent, PerfilComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,7 +36,8 @@ import { NavComponent } from './nav/nav.component';
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent],
