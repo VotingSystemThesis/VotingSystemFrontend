@@ -1,7 +1,7 @@
 <div class="main-container">
   <div class="mat-card bordeCard">
     <mat-sidenav-container class="sidenav-container">
-      <mat-sidenav #drawer class="sidenav" fixedInViewport
+      <mat-sidenav #drawer fixedInViewport
                    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                    mode="over">
       </mat-sidenav>
@@ -9,16 +9,30 @@
       <mat-sidenav-content>
         <mat-toolbar style="height: max-content">
           <div class="logo">
-            <img src="../../assets/images/logo.png" alt="" />
+            <a href="/home">
+              <img src="../../assets/images/logo.png" alt="" />
+            </a>
             <h1>VotingSystem</h1>
           </div>
           <span class="default-spacer"></span>
 
           <div class="texto">
             <ul>
-              <li> HOME </li>
-              <li> VOTACIONES PASADAS </li>
-              <li> PERFIL </li>
+              <li>
+                <a href="/home">
+                  HOME
+                </a>
+              </li>
+              <li>
+                <a href="/verificacion">
+                  VOTACIONES PASADAS
+                </a>
+              </li>
+              <li>
+                <a href="/verificacion">
+                  PERFIL
+                </a>
+              </li>
             </ul>
           </div>
 

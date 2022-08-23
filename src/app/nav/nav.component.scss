@@ -16,14 +16,8 @@
   }
 
   .sidenav-container {
-    height: max-content;
     border-radius: 4em;
     border-width: 0.1em;
-  }
-
-  .sidenav {
-    width: max-content;
-    background: #1955AE;
   }
 
   .mat-toolbar{
@@ -56,13 +50,19 @@
 
   li{
     display:inline;
-    padding-left:35px;
+    padding-left:45%;
     padding-right:3px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+    font-size: medium;
   }
 
   .texto{
     position: absolute;
-    left: 35%;
+    left: 27%;
   }
 
 }
