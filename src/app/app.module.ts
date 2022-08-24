@@ -20,6 +20,8 @@ import { NavComponent } from './nav/nav.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { VotingCardComponent } from './common/voting-card/voting-card.component';
+import { SinglerowComponent } from './common/singlerow/singlerow.component';
+import { DoublerowComponent } from './common/doublerow/doublerow.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { VotingCardComponent } from './common/voting-card/voting-card.component'
     NavComponent,
     PerfilComponent,
     VotingCardComponent,
+    SinglerowComponent,
+    DoublerowComponent,
   ],
   imports: [
     BrowserModule,

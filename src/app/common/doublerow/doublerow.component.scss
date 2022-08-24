@@ -1,0 +1,22 @@
+@import "src/assets/styles/styles.scss";
+
+.container{
+    margin-top: 10px;
+    @include title();
+    @include paragraph();
+    h1{
+        font-size: 1em;
+        margin: 0;
+    }
+    p{
+        margin: 0;
+        font-size: 1em;
+        text-align: left;
+    }
+    display: flex;
+
+    .first-container,.second-contaier{
+        margin-right: 5%;
+    }
+    
+}
