@@ -22,6 +22,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { VotingCardComponent } from './common/voting-card/voting-card.component';
 import { SinglerowComponent } from './common/singlerow/singlerow.component';
 import { DoublerowComponent } from './common/doublerow/doublerow.component';
+import { VotacionespasadasComponent } from './votacionespasadas/votacionespasadas.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DoublerowComponent } from './common/doublerow/doublerow.component';
     VotingCardComponent,
     SinglerowComponent,
     DoublerowComponent,
+    VotacionespasadasComponent,
   ],
   imports: [
     BrowserModule,

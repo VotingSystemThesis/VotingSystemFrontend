@@ -1,0 +1,69 @@
+@import "src/assets/styles/styles.scss";
+
+.main-content{
+  width: 100vw;
+  height: 100vh;
+  background: $mainBackgroundColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1{
+    font-size: $titleFont;
+  }
+
+  .fila-carta{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px;
+
+    .mat-card{
+      display: flex;
+      margin-left: 15px;
+
+
+      .mat-card-content{
+        margin-left: 30px;
+      }
+
+      .mat-card-sm-image{
+        width: 7em;
+        height: 7em;
+      }
+
+    }
+
+  }
+
+
+
+  .profile-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    .photo{
+      width: 200px;
+      border-radius: 50%;
+      height: 200px;
+      background-image: url("../../assets/images/persona.jpg");
+      background-position: center;
+      background-size: cover;
+      margin-right: 5%;
+      img{
+        object-fit: cover;
+      }
+    }
+    .profile-data{
+      background-color: white;
+      width: 40%;
+      padding: 3%;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+  }
+}
+
