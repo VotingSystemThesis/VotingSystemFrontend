@@ -23,8 +23,7 @@
     .mat-card{
       display: flex;
       margin-left: 15px;
-
-
+      
       .mat-card-content{
         margin-left: 30px;
       }
@@ -36,34 +35,6 @@
 
     }
 
-  }
-
-
-
-  .profile-container{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    width: 100%;
-    .photo{
-      width: 200px;
-      border-radius: 50%;
-      height: 200px;
-      background-image: url("../../assets/images/persona.jpg");
-      background-position: center;
-      background-size: cover;
-      margin-right: 5%;
-      img{
-        object-fit: cover;
-      }
-    }
-    .profile-data{
-      background-color: white;
-      width: 40%;
-      padding: 3%;
-      border-radius: 10px;
-      box-sizing: border-box;
-    }
   }
 }
 
