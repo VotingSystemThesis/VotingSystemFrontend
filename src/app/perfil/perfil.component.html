@@ -1,5 +1,6 @@
 <app-nav></app-nav>
-<div class="main-content">
+
+<div class="main-content" *ngIf="estado">
   <h1>Perfil</h1>
 
   <div class="profile-container">
@@ -45,3 +46,19 @@
     </div>
   </div>
 </div>
+
+<div class="main-content" *ngIf="!estado">
+  <h1>Perfil</h1>
+
+  <div class="profile-container">
+    <div class="photo-error"></div>
+    <div class="profile-data mat-elevation-z4 centrar">
+      <h1> Ha ocurrido un error en la carga de la información del votante </h1>
+      <button class="boton" [routerLink]="['/perfil']">
+        REINTENTAR
+      </button>
+    </div>
+  </div>
+</div>
+
+

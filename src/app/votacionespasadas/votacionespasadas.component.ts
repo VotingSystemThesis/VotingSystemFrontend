@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./votacionespasadas.component.scss']
 })
 export class VotacionespasadasComponent implements OnInit {
-
+  estado: boolean | undefined;
   constructor() { }
 
   ngOnInit(): void {
+    this.estado = false;
   }
 
 }

@@ -1,6 +1,7 @@
 @import "src/assets/styles/styles.scss";
 
 .main-content{
+  @include title;
   width: 100vw;
   height: 100vh;
   background: $mainBackgroundColor;
@@ -26,19 +27,39 @@
         object-fit: cover;
       }
     }
+    @include button();
+    .centrar{
+      text-align: center;
+    }
+    .photo-error{
+      width: 200px;
+      border-radius: 50%;
+      height: 200px;
+      background-image: url("../../assets/images/logoError.png");
+      background-position: center;
+      background-size: cover;
+      margin-right: 5%;
+      img{
+        object-fit: cover;
+      }
+    }
+    .boton{
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      margin-left: 100px;
+    }
     .profile-data{
       background-color: white;
       width: 40%;
       padding: 3%;
       border-radius: 10px;
       box-sizing: border-box;
-
-
     }
   }
 
 
 
-  
+
 }
 

@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./perfil.component.scss']
 })
 export class PerfilComponent implements OnInit {
-
+  estado: boolean | undefined;
   constructor() { }
 
   ngOnInit(): void {
+    this.estado = false;
   }
-
 }
