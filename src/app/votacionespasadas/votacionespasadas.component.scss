@@ -13,6 +13,7 @@
 
   h1{
     font-size: $titleFont;
+    font-size: 25px;
   }
 
   .fila-carta{
@@ -25,6 +26,7 @@
     .mat-card{
       display: flex;
       margin-left: 15px;
+      border-radius: 44px;
 
       .mat-card-content{
         margin-left: 30px;
