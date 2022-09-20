@@ -23,6 +23,7 @@ import { VotingCardComponent } from './common/voting-card/voting-card.component'
 import { SinglerowComponent } from './common/singlerow/singlerow.component';
 import { DoublerowComponent } from './common/doublerow/doublerow.component';
 import { VotacionespasadasComponent } from './votacionespasadas/votacionespasadas.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { VotacionespasadasComponent } from './votacionespasadas/votacionespasada
     MatInputModule,
     MatGridListModule,
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
