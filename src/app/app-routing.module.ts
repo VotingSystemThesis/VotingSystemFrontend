@@ -8,6 +8,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { VotacionespasadasComponent } from './votacionespasadas/votacionespasadas.component';
 import { AuthGuard } from './guards/auth.guard';
 import { CandidatosComponent } from './candidatos/candidatos.component';
+import { PartidosComponent } from './core/partidos/partidos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -17,6 +18,11 @@ const routes: Routes = [
   {
     path: 'candidates',
     component: CandidatosComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'vote/:id',
+    component: PartidosComponent,
     canActivate: [AuthGuard],
   },
 

@@ -15,7 +15,6 @@ export class LoginService {
     return this.http.get(this.getVoterUrl);
   }
   isAuthenticated() {
-    console.log(localStorage.getItem('isAuthenticated'));
     return localStorage.getItem('isAuthenticated') == 'true' ? true : false;
   }
   validateVoter(voters: Votante[], voterToValidate: any): boolean {

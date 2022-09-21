@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Partido } from 'src/app/models/Partido';
 
 @Component({
   selector: 'app-partidos',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartidosComponent implements OnInit {
   constructor() {}
+  partidos: Partido[] = [];
 
+  estado = true;
   ngOnInit(): void {}
 }
