@@ -68,6 +68,7 @@ $cardColor: white;
         border-color: #d0d4d9;
         @if map-has-key($props, "radius") {
           border-radius: map-get($props, "radius");
+          height: map-get($props, "height");
         }
 
         padding: 5px;
@@ -81,8 +82,6 @@ $cardColor: white;
       }
       input {
         width: 90%;
-        height: 50px;
-
         padding: 5px;
         font-size: 1.3rem;
         color: black;
@@ -95,9 +94,9 @@ $cardColor: white;
         @if map-has-key($props, "border-color") {
           border-color: map-get($props, "border-color");
         }
-        @if map-has-key($props, "height") {
-          height: map-get($props, "height");
-        }
+        //        @if map-has-key($props, "height") {
+        //        height: map-get($props, "height");
+        //    }
       }
       select {
         width: 100%;
