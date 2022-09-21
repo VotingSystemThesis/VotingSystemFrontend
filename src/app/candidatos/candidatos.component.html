@@ -1,1 +1,26 @@
-<p>candidatos works!</p>
+<app-nav></app-nav>
+<div class="main-content" *ngIf="estado">
+  <h1>Candidatos</h1>
+
+  <div class="candidatos">
+    <app-candidatos-card
+      *ngFor="let candidato of candidatos"
+      [candidato]="candidato"
+    ></app-candidatos-card>
+  </div>
+</div>
+
+<div class="main-content" *ngIf="!estado">
+  <h1>Candidatos</h1>
+
+  <div class="fila-carta">
+    <mat-card class="aliniamiento">
+      <img mat-card-sm-image src="assets/images/lupa.png" />
+      <h1>
+        No se encontraron <br />
+        Candidatos
+      </h1>
+      <button class="boton" [routerLink]="['/perfil']">REINTENTAR</button>
+    </mat-card>
+  </div>
+</div>

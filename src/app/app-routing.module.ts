@@ -7,12 +7,19 @@ import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { VotacionespasadasComponent } from './votacionespasadas/votacionespasadas.component';
 import { AuthGuard } from './guards/auth.guard';
+import { CandidatosComponent } from './candidatos/candidatos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'verificacion', component: InicioComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  {
+    path: 'candidates',
+    component: CandidatosComponent,
+    canActivate: [AuthGuard],
+  },
+
   { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard] },
   {
     path: 'VotacionesPasadas',
