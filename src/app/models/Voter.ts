@@ -1,5 +1,6 @@
 export class Votante {
   name?: string;
+  id?: string;
   lastName?: string;
   dni?: string;
   email?: string;

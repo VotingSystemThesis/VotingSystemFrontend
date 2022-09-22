@@ -6,42 +6,31 @@
   <div class="profile-container">
     <div class="photo"></div>
     <div class="profile-data mat-elevation-z4">
-      <app-singlerow
-        [text]="'Nombre de prueba'"
-        [title]="'Nombre'"
-      ></app-singlerow>
       <app-doublerow
-        [text1]="'Nombre de prueba'"
-        [title1]="'Apellido Paterno'"
-        [text2]="'Nombre de prueba'"
-        [title2]="'Apellido Materno'"
+        [text1]="voter?.name!"
+        [title1]="'Nombres'"
+        [text2]="voter?.lastName!"
+        [title2]="'Apellidos'"
       ></app-doublerow>
       <app-doublerow></app-doublerow>
       <app-doublerow
-        [text1]="'Nombre de prueba'"
+        [text1]="voter?.gender! ? 'Masculino' : 'Femenino'"
         [title1]="'Sexo'"
-        [text2]="'Nombre de prueba'"
+        [text2]="getAge()"
         [title2]="'Edad'"
       ></app-doublerow>
       <app-doublerow></app-doublerow>
 
       <app-doublerow
-        [text1]="'Nombre de prueba'"
-        [title1]="'Nacionalidad'"
-        [text2]="'Nombre de prueba'"
-        [title2]="'Estado Civil'"
+        [text2]="'Peruano'"
+        [title2]="'Nacionalidad'"
+        [text1]="voter?.dni!"
+        [title1]="'DNI'"
       ></app-doublerow>
-      <app-doublerow></app-doublerow>
-      <app-doublerow
-        [text1]="'Nombre de prueba'"
-        [title1]="'Nacimiento'"
-        [text2]="'Nombre de prueba'"
-        [title2]="'Ubigeo'"
-      ></app-doublerow>
-      <app-doublerow></app-doublerow>
+
       <app-singlerow
-        [text]="'Descampado'"
-        [title]="'Dirección'"
+        [text]="voter?.email!"
+        [title]="'Correo Electrónico'"
       ></app-singlerow>
     </div>
   </div>
@@ -53,12 +42,8 @@
   <div class="profile-container">
     <div class="photo-error"></div>
     <div class="profile-data mat-elevation-z4 centrar">
-      <h1> Ha ocurrido un error en la carga de la información del votante </h1>
-      <button class="boton" [routerLink]="['/perfil']">
-        REINTENTAR
-      </button>
+      <h1>Ha ocurrido un error en la carga de la información del votante</h1>
+      <button class="boton" [routerLink]="['/perfil']">REINTENTAR</button>
     </div>
   </div>
 </div>
-
-

@@ -5,15 +5,33 @@ import { LoginComponent } from './login/login.component';
 import { InicioComponent } from './authinicio/inicio.component';
 import { HomeComponent } from './home/home.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { VotacionespasadasComponent } from "./votacionespasadas/votacionespasadas.component";
+import { VotacionespasadasComponent } from './votacionespasadas/votacionespasadas.component';
+import { AuthGuard } from './guards/auth.guard';
+import { CandidatosComponent } from './candidatos/candidatos.component';
+import { PartidosComponent } from './core/partidos/partidos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'verificacion', component: InicioComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'perfil', component: PerfilComponent },
-  { path: 'VotacionesPasadas', component: VotacionespasadasComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  {
+    path: 'candidates',
+    component: CandidatosComponent,
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'vote/:id',
+    component: PartidosComponent,
+    canActivate: [AuthGuard],
+  },
+
+  { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard] },
+  {
+    path: 'VotacionesPasadas',
+    component: VotacionespasadasComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

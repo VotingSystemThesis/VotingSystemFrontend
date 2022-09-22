@@ -14,6 +14,9 @@ export class LoginService {
   getAllVoters() {
     return this.http.get(this.getVoterUrl);
   }
+  isAuthenticated() {
+    return localStorage.getItem('isAuthenticated') == 'true' ? true : false;
+  }
   validateVoter(voters: Votante[], voterToValidate: any): boolean {
     let voter = voters.find(
       (x) =>
@@ -21,9 +24,17 @@ export class LoginService {
         x.emissionDate == voterToValidate.emissionDate
     );
     if (voter?.name?.length! > 0) {
+      localStorage.setItem('dni', voter?.dni!);
+      localStorage.setItem('votanteId', voter?.id!);
       return true;
     } else {
+      localStorage.setItem('dni', '');
+
       return false;
     }
+  }
+
+  hasDni() {
+    return localStorage.getItem('dni')?.length! > 0 ? true : false;
   }
 }

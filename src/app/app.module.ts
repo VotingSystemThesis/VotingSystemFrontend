@@ -24,6 +24,15 @@ import { SinglerowComponent } from './common/singlerow/singlerow.component';
 import { DoublerowComponent } from './common/doublerow/doublerow.component';
 import { VotacionespasadasComponent } from './votacionespasadas/votacionespasadas.component';
 import { DatePipe } from '@angular/common';
+import { FingerprintComponent } from './fingerprint/fingerprint.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { AuthGuard } from './guards/auth.guard';
+import { PartidosComponent } from './core/partidos/partidos.component';
+import { PartidoCardComponent } from './core/partido-card/partido-card.component';
+import { VotingConfirmationComponent } from './common/voting-confirmation/voting-confirmation.component';
+import { CandidatosComponent } from './candidatos/candidatos.component';
+import { CandidatoCardComponent } from './candidatos/candidatos-card/candidatos-card.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +46,12 @@ import { DatePipe } from '@angular/common';
     SinglerowComponent,
     DoublerowComponent,
     VotacionespasadasComponent,
+    FingerprintComponent,
+    PartidosComponent,
+    PartidoCardComponent,
+    VotingConfirmationComponent,
+    CandidatosComponent,
+    CandidatoCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,12 +65,14 @@ import { DatePipe } from '@angular/common';
     MatIconModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatDialogModule,
     MatCardModule,
+    MatSnackBarModule,
     MatButtonModule,
     MatInputModule,
     MatGridListModule,
   ],
-  providers: [DatePipe],
+  providers: [AuthGuard, DatePipe],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
