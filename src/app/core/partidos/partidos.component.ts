@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Partido } from 'src/app/models/Partido';
+import { ActivatedRoute, Route } from '@angular/router';
+import { Candidato } from 'src/app/models/Candidato';
+import { EleccionVoting } from 'src/app/models/ElectionVoting';
+import { Votante } from 'src/app/models/Voter';
+import { CandidateService } from 'src/app/services/candidate.service';
 
 @Component({
   selector: 'app-partidos',
@@ -7,9 +11,25 @@ import { Partido } from 'src/app/models/Partido';
   styleUrls: ['./partidos.component.scss'],
 })
 export class PartidosComponent implements OnInit {
-  constructor() {}
-  partidos: Partido[] = [];
+  constructor(
+    private candidateService: CandidateService,
+    private route: ActivatedRoute
+  ) {}
+  candidatos: Candidato[] = [];
+  voter?: Votante;
+  actualElections?: EleccionVoting[] = [];
 
   estado = true;
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.initialize();
+  }
+  initialize() {
+    console.log(this.route.snapshot.params['id']);
+    let electionId = '632f3283dbd5727a6b9637ed';
+    this.candidateService
+      .getCandidateByElection(electionId)
+      .subscribe((data: any) => {
+        this.candidatos = data;
+      });
+  }
 }

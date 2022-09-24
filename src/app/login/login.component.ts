@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
     dni: new FormControl('', Validators.required),
     emissionDate: new FormControl('', Validators.required),
+    birthDate: new FormControl('', Validators.required),
   });
   constructor(
     private router: Router,
@@ -37,17 +38,27 @@ export class LoginComponent implements OnInit {
   submitForm() {
     if (this.loginForm.valid) {
       let newEmissionDate = this.loginForm.get('emissionDate')?.value;
+      let birthDate = this.loginForm.get('birthDate')?.value;
       let body = {
         dni: this.loginForm.get('dni')?.value,
         emissionDate: this.datePipe.transform(newEmissionDate, 'dd-MM-yyyy'),
+        birthDate: this.datePipe.transform(birthDate, 'dd-MM-yyyy'),
       };
 
-      this.loginService.getAllVoters().subscribe((data: any) => {
-        let response = this.loginService.validateVoter(data, body);
-        if (response) {
-          this.router.navigate(['/verificacion']);
-        }
-      });
+      this.loginService
+        .isVoterRegistered(body.dni, body.birthDate!, body.emissionDate!)
+        .subscribe(
+          (data: any) => {
+            console.log(data);
+
+            if (data) {
+              this.router.navigate(['/verificacion']);
+            }
+          },
+          (err) => {
+            console.log(err);
+          }
+        );
     } else {
       console.log('Not Valid');
     }

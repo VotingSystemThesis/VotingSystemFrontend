@@ -21,7 +21,8 @@ export class LoginService {
     let voter = voters.find(
       (x) =>
         x.dni == voterToValidate.dni &&
-        x.emissionDate == voterToValidate.emissionDate
+        x.emissionDate == voterToValidate.emissionDate &&
+        x.birthDate == voterToValidate.birthDate
     );
     if (voter?.name?.length! > 0) {
       localStorage.setItem('dni', voter?.dni!);
@@ -32,6 +33,11 @@ export class LoginService {
 
       return false;
     }
+  }
+  isVoterRegistered(dni: string, birthDate: string, emissionDate: string) {
+    return this.http.get(
+      `${this.getVoterUrl}/dni/${dni}/birth/${birthDate}/emission/${emissionDate}`
+    );
   }
 
   hasDni() {

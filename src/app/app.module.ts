@@ -28,11 +28,12 @@ import { FingerprintComponent } from './fingerprint/fingerprint.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { AuthGuard } from './guards/auth.guard';
-import { PartidosComponent } from './core/partidos/partidos.component';
 import { PartidoCardComponent } from './core/partido-card/partido-card.component';
 import { VotingConfirmationComponent } from './common/voting-confirmation/voting-confirmation.component';
 import { CandidatosComponent } from './candidatos/candidatos.component';
 import { CandidatoCardComponent } from './candidatos/candidatos-card/candidatos-card.component';
+import { VoteConfirmComponent } from './core/vote-confirm/vote-confirm.component';
+import { PartidosComponent } from './core/partidos/partidos.component';
 
 @NgModule({
   declarations: [
@@ -47,11 +48,13 @@ import { CandidatoCardComponent } from './candidatos/candidatos-card/candidatos-
     DoublerowComponent,
     VotacionespasadasComponent,
     FingerprintComponent,
-    PartidosComponent,
     PartidoCardComponent,
     VotingConfirmationComponent,
     CandidatosComponent,
+    PartidosComponent,
+    PartidoCardComponent,
     CandidatoCardComponent,
+    VoteConfirmComponent,
   ],
   imports: [
     BrowserModule,

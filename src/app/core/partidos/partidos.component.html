@@ -1,11 +1,11 @@
 <app-nav></app-nav>
 <div class="main-content" *ngIf="estado">
-  <h1>Candidatos</h1>
+  <h1>Candidatos Disponibles</h1>
 
   <div class="candidatos">
     <app-partido-card
-      *ngFor="let partido of partidos"
-      [partido]="partido"
+      *ngFor="let candidato of candidatos"
+      [candidato]="candidato"
     ></app-partido-card>
   </div>
 </div>

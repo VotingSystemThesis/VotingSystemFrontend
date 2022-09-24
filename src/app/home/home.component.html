@@ -2,7 +2,13 @@
 <div class="main-background">
   <div class="welcome-container">
     <h1>Bienvenido a VotingSystem</h1>
-    <p>Seleccione la opción el cual desea realizar su <br> Voto</p>
-    <app-voting-card></app-voting-card>
+    <p>
+      Seleccione la opción el cual desea realizar su <br />
+      Voto
+    </p>
+    <app-voting-card
+      *ngFor="let election of actualElections"
+      [election]="election"
+    ></app-voting-card>
   </div>
 </div>

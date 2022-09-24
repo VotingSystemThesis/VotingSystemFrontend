@@ -14,4 +14,7 @@ export class CandidateService {
   getAllCandidates(): Observable<any> {
     return this.http.get(this.url.toString());
   }
+  getCandidateByElection(electionId: string) {
+    return this.http.get(`${this.url}/voting/${electionId}`);
+  }
 }

@@ -1,0 +1,14 @@
+<div class="vote-confirm">
+  <h1>Confirmacion de Voto</h1>
+  <div class="text">
+    <p>
+      ¿ Estás seguro que desea votar por
+      <a>{{ candidate?.name + " " + candidate?.lastName }}</a> de
+      <a>{{ " " + candidate?.politicalParty?.name! }}</a>
+    </p>
+  </div>
+  <div class="buttons">
+    <button (click)="vote()">VOTAR</button>
+    <p (click)="cancel()">cancelar</p>
+  </div>
+</div>
