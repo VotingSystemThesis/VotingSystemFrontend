@@ -23,4 +23,10 @@ export class VoterService {
       `${this.getVoterUrl}/voting/city/${city}/status/PENDING`
     );
   }
+  getElectionById(id: string) {
+    return this.http.get(`${this.getVoterUrl}/voting/${id}`);
+  }
+  vote(body: any) {
+    return this.http.post(`${this.getVoterUrl}/vote`, body);
+  }
 }

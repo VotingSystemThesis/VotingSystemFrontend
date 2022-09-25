@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDateFormats } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ActivatedRoute } from '@angular/router';
 import { Candidato } from 'src/app/models/Candidato';
 import { Partido } from 'src/app/models/Partido';
 import { VoteConfirmComponent } from '../vote-confirm/vote-confirm.component';
@@ -11,9 +12,12 @@ import { VoteConfirmComponent } from '../vote-confirm/vote-confirm.component';
   styleUrls: ['./partido-card.component.scss'],
 })
 export class PartidoCardComponent implements OnInit {
-  constructor(private dialog: MatDialog) {}
+  electionId = '';
+  constructor(private dialog: MatDialog, private route: ActivatedRoute) {}
   @Input() candidato: Candidato = new Candidato();
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.electionId = this.route.snapshot.params['id'];
+  }
   vote() {
     this.dialog
       .open(VoteConfirmComponent, {
@@ -21,6 +25,7 @@ export class PartidoCardComponent implements OnInit {
         height: '50vh',
         data: {
           personToVote: this.candidato,
+          electionId: this.electionId,
         },
       })
       .afterClosed();

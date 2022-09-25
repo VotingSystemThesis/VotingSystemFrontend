@@ -24,8 +24,7 @@ export class PartidosComponent implements OnInit {
     this.initialize();
   }
   initialize() {
-    console.log(this.route.snapshot.params['id']);
-    let electionId = '632f3283dbd5727a6b9637ed';
+    let electionId = this.route.snapshot.params['id'];
     this.candidateService
       .getCandidateByElection(electionId)
       .subscribe((data: any) => {
