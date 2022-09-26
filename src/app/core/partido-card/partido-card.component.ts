@@ -1,7 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDateFormats } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route } from '@angular/router';
 import { Candidato } from 'src/app/models/Candidato';
 import { Partido } from 'src/app/models/Partido';
 import { VoteConfirmComponent } from '../vote-confirm/vote-confirm.component';
@@ -15,6 +15,8 @@ export class PartidoCardComponent implements OnInit {
   electionId = '';
   constructor(private dialog: MatDialog, private route: ActivatedRoute) {}
   @Input() candidato: Candidato = new Candidato();
+  @Output() doneEmitter = new EventEmitter();
+
   ngOnInit(): void {
     this.electionId = this.route.snapshot.params['id'];
   }
@@ -28,6 +30,9 @@ export class PartidoCardComponent implements OnInit {
           electionId: this.electionId,
         },
       })
-      .afterClosed();
+      .afterClosed()
+      .subscribe((data: any) => {
+        this.doneEmitter.emit(data);
+      });
   }
 }

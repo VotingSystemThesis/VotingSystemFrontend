@@ -6,6 +6,7 @@
     <app-partido-card
       *ngFor="let candidato of candidatos"
       [candidato]="candidato"
+      (doneEmitter)="doneVoting()"
     ></app-partido-card>
   </div>
 </div>

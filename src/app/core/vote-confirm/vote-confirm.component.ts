@@ -1,7 +1,7 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit, Output } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Route } from '@angular/router';
 import { FingerprintComponent } from 'src/app/fingerprint/fingerprint.component';
 import { Candidato } from 'src/app/models/Candidato';
 import { EleccionVoting } from 'src/app/models/ElectionVoting';
@@ -20,7 +20,6 @@ export class VoteConfirmComponent implements OnInit {
   constructor(
     public dialogRef: MatDialogRef<FingerprintComponent>,
     private snackBar: MatSnackBar,
-    private route: ActivatedRoute,
     private voterService: VoterService,
     @Inject(MAT_DIALOG_DATA) public data?: any
   ) {}
@@ -44,12 +43,11 @@ export class VoteConfirmComponent implements OnInit {
       voting: this.election,
     };
     this.voterService.vote(body).subscribe((data: any) => {
-      console.log(data);
       this.snackBar.open('Se ha registrado su voto correctamente', '', {
         duration: 2000,
         panelClass: ['green-snackbar'],
       });
-      this.dialogRef.close();
+      this.dialogRef.close(data);
     });
   }
   cancel() {

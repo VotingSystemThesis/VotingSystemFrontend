@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Route } from '@angular/router';
+import { ActivatedRoute, Route, Router } from '@angular/router';
 import { Candidato } from 'src/app/models/Candidato';
 import { EleccionVoting } from 'src/app/models/ElectionVoting';
 import { Votante } from 'src/app/models/Voter';
@@ -13,7 +13,8 @@ import { CandidateService } from 'src/app/services/candidate.service';
 export class PartidosComponent implements OnInit {
   constructor(
     private candidateService: CandidateService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
   candidatos: Candidato[] = [];
   voter?: Votante;
@@ -30,5 +31,8 @@ export class PartidosComponent implements OnInit {
       .subscribe((data: any) => {
         this.candidatos = data;
       });
+  }
+  doneVoting() {
+    this.router.navigate(['/home']);
   }
 }
