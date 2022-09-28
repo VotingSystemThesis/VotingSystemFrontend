@@ -27,6 +27,8 @@ export class CandidateProfileComponent implements OnInit {
       (err) => {
         if (err.status == 200) {
           this.imageUrl = err.url;
+        } else {
+          this.imageUrl = '';
         }
       }
     );

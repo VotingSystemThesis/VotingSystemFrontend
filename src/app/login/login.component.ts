@@ -52,6 +52,8 @@ export class LoginComponent implements OnInit {
             console.log(data);
 
             if (data) {
+              localStorage.setItem('dni', data?.dni!);
+              localStorage.setItem('votanteId', data?.id!);
               this.router.navigate(['/verificacion']);
             }
           },
