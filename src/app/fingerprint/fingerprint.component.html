@@ -1,10 +1,10 @@
 <div class="fingerprint">
-  <ng-container *ngIf="tutorialValidator == false; else tutorial">
+  <div class="fingerprintreader" *ngIf="tutorialValidator == false">
     <h1>Registro de Huella Dactilar</h1>
     <p>Por favor, coloque su dedo indice cuando observe el color verde</p>
     <div class="newColor" [ngClass]="testing"></div>
-  </ng-container>
-  <ng-template #tutorial>
+  </div>
+  <div *ngIf="tutorialValidator == true" class="tutorial">
     <h1>Tutorial</h1>
     <p>
       Para el proceso de registro es necesario que coloque su dedo indice por 1
@@ -14,5 +14,6 @@
       src="https://uploads-ssl.webflow.com/563189a77b029f692664cc27/5d0643f35b89165111c1db9d_fp-animation.gif"
       alt=""
     />
-  </ng-template>
+    <button (click)="skipTutorial()">Continuar</button>
+  </div>
 </div>

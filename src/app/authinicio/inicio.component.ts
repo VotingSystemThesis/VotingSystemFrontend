@@ -27,7 +27,7 @@ export class InicioComponent implements OnInit {
       this.dialog
         .open(FingerprintComponent, {
           width: '50vw',
-          height: '70vh',
+          height: '80vh',
         })
         .afterClosed()
         .subscribe((response: any) => {

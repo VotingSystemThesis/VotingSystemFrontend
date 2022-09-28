@@ -16,13 +16,7 @@ export class FingerprintComponent implements OnInit {
   tutorialValidator = true;
   testing: any = 'go';
   time: any;
-  ngOnInit(): void {
-    let dni = localStorage.getItem('dni');
-    this.fingerprintService.validateFingerprint(dni!).subscribe((data: any) => {
-      this.dialogRef.close(data);
-    });
-    this.countFourSeconds();
-  }
+  ngOnInit(): void {}
   countFourSeconds() {
     setTimeout(() => {}, 100);
     this.time = setInterval(() => {
@@ -31,5 +25,15 @@ export class FingerprintComponent implements OnInit {
         this.testing = 'go';
       }, 800);
     }, 4000);
+  }
+  skipTutorial() {
+    this.tutorialValidator = false;
+
+    let dni = localStorage.getItem('dni');
+
+    this.fingerprintService.validateFingerprint(dni!).subscribe((data: any) => {
+      this.dialogRef.close(data);
+    });
+    this.countFourSeconds();
   }
 }

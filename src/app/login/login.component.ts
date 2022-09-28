@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
 import { LoginService } from '../services/login.service';
 import { Votante } from '../models/Voter';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 
@@ -26,6 +27,8 @@ export class LoginComponent implements OnInit {
     birthDate: new FormControl('', Validators.required),
   });
   constructor(
+    private snackBar: MatSnackBar,
+
     private router: Router,
     private datePipe: DatePipe,
     private loginService: LoginService
@@ -52,12 +55,24 @@ export class LoginComponent implements OnInit {
             console.log(data);
 
             if (data) {
+              this.snackBar.open(
+                'Sus datos se han validado correctamente',
+                '',
+                {
+                  duration: 2000,
+                  panelClass: ['green-snackbar'],
+                }
+              );
               localStorage.setItem('dni', data?.dni!);
               localStorage.setItem('votanteId', data?.id!);
               this.router.navigate(['/verificacion']);
             }
           },
           (err) => {
+            this.snackBar.open('Ha ocurrido un error en la validación', '', {
+              duration: 2000,
+              panelClass: ['red-snackbar'],
+            });
             console.log(err);
           }
         );
