@@ -13,14 +13,19 @@ export class VoterService {
   getVoterById(id: string) {
     return this.http.get(`${this.getVoterUrl}/${id}`);
   }
-  getPastElections(city: string) {
+  getPastElections(city: string, id: string) {
     return this.http.get(
-      `${this.getVoterUrl}/voting/city/${city}/status/COMPLETED`
+      `${this.getVoterUrl}/voting/city/${city}/status/COMPLETED/voter/${id}`
     );
   }
   getActualElections(city: string) {
     return this.http.get(
       `${this.getVoterUrl}/voting/city/${city}/status/PENDING`
+    );
+  }
+  getRemainingElections(city: string, id: string) {
+    return this.http.get(
+      `${this.getVoterUrl}/voting/city/${city}/status/PENDING/voter/${id}`
     );
   }
   getElectionById(id: string) {

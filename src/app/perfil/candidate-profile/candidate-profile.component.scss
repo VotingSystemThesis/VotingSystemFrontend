@@ -1,0 +1,62 @@
+@import "src/assets/styles/styles.scss";
+
+.main-content {
+  margin: 0;
+
+  @include title;
+  width: 100%;
+  height: 100%;
+  background: $mainBackgroundColor;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .profile-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    img {
+      width: 200px;
+      border-radius: 50%;
+      height: 200px;
+      //background-image: url("../../assets/images/persona.jpg");
+      background-position: center;
+      background-size: cover;
+      margin-right: 5%;
+      img {
+        object-fit: cover;
+      }
+    }
+    @include button();
+    .centrar {
+      text-align: center;
+    }
+    .photo-error {
+      width: 200px;
+      border-radius: 50%;
+      height: 200px;
+      //background-image: url("../../assets/images/logoError.png");
+      background-position: center;
+      background-size: cover;
+      margin-right: 5%;
+      img {
+        object-fit: cover;
+      }
+    }
+    .boton {
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      margin-left: 100px;
+    }
+    .profile-data {
+      background-color: white;
+      width: 40%;
+      padding: 3%;
+      border-radius: 10px;
+      box-sizing: border-box;
+    }
+  }
+}

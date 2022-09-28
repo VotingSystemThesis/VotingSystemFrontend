@@ -34,6 +34,7 @@ import { CandidatosComponent } from './candidatos/candidatos.component';
 import { CandidatoCardComponent } from './candidatos/candidatos-card/candidatos-card.component';
 import { PartidosComponent } from './core/partidos/partidos.component';
 import { VoteConfirmComponent } from './core/vote-confirm/vote-confirm.component';
+import { CandidateProfileComponent } from './perfil/candidate-profile/candidate-profile.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { VoteConfirmComponent } from './core/vote-confirm/vote-confirm.component
     PartidoCardComponent,
     CandidatoCardComponent,
     VoteConfirmComponent,
+    CandidateProfileComponent,
   ],
   imports: [
     BrowserModule,

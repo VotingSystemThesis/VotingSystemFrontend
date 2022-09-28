@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CandidateService {
   url = `${environment.hostUrl}/candidate`;
-
+  imageUrl = `${environment.imageUrl}`;
   constructor(private http: HttpClient) {}
 
   getAllCandidates(): Observable<any> {
@@ -17,4 +17,8 @@ export class CandidateService {
   getCandidateByElection(electionId: string) {
     return this.http.get(`${this.url}/voting/${electionId}`);
   }
+  getProfilePic(id: string) {
+    return this.http.get(`${this.imageUrl}/${id}`);
+  }
+  getProfilePicUrl() {}
 }

@@ -21,7 +21,7 @@ export class VotacionespasadasComponent implements OnInit {
     this.voterService.getVoterById(id!).subscribe((data: any) => {
       this.voter = data;
       this.voterService
-        .getPastElections(this.voter?.city!)
+        .getPastElections(this.voter?.city!, this.voter?.id!)
         .subscribe((data: any) => {
           this.pastElections = data;
         });

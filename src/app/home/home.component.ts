@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
     this.voterService.getVoterById(id!).subscribe((data: any) => {
       this.voter = data;
       this.voterService
-        .getActualElections(this.voter?.city!)
+        .getRemainingElections(this.voter?.city!, this.voter?.id!)
         .subscribe((data: any) => {
           this.actualElections = data;
         });

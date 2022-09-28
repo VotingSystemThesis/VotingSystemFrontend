@@ -7,6 +7,8 @@
   border-radius: 20px;
   background-color: white;
   padding: 10px;
+  cursor: pointer;
+  transition: ease all 250ms;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -26,4 +28,7 @@
     align-items: center;
     justify-content: center;
   }
+}
+.card:hover {
+  transform: scale(1.1);
 }
