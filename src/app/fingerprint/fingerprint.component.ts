@@ -13,7 +13,7 @@ export class FingerprintComponent implements OnInit {
     public dialogRef: MatDialogRef<FingerprintComponent>,
     @Inject(MAT_DIALOG_DATA) public data?: any
   ) {}
-  isLoading = true;
+  tutorialValidator = true;
   testing: any = 'go';
   time: any;
   ngOnInit(): void {

@@ -26,8 +26,8 @@ export class InicioComponent implements OnInit {
     if (this.loginService.hasDni()) {
       this.dialog
         .open(FingerprintComponent, {
-          width: '30vw',
-          height: '50vh',
+          width: '50vw',
+          height: '70vh',
         })
         .afterClosed()
         .subscribe((response: any) => {
