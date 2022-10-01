@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  hostUrl: 'backend-api',
+  hostUrl: 'http://54.232.15.128',
   imageUrl: 'https://profilecp.s3.sa-east-1.amazonaws.com',
 };
 
