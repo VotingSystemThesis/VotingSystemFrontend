@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  hostUrl: 'http://54.232.15.128',
+  //hostUrl: 'http://54.232.15.128',
+  hostUrl: 'https://www.reniec.info',
   imageUrl: 'https://profilecp.s3.sa-east-1.amazonaws.com',
 };
 
