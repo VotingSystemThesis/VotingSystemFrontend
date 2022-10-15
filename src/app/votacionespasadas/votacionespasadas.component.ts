@@ -24,6 +24,7 @@ export class VotacionespasadasComponent implements OnInit {
         .getPastElections(this.voter?.city!, this.voter?.id!)
         .subscribe((data: any) => {
           this.pastElections = data;
+          console.log(this.pastElections);
         });
     });
   }

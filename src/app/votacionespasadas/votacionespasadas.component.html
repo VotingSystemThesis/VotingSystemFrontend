@@ -1,19 +1,19 @@
 <app-nav></app-nav>
-<div class="main-content" *ngIf="estado">
+<div class="main-content" *ngIf="pastElections.length > 0">
   <h1>Votaciones Pasadas</h1>
 
   <div class="fila-carta">
-    <mat-card *ngFor="let election of pastElections">
-      <mat-card-content>
-        <h1>{{ election.description }}</h1>
-
-        <span> {{ election.date }} </span>
-      </mat-card-content>
-    </mat-card>
+    <div class="card mat-elevation-z5" *ngFor="let election of pastElections">
+      <h1>{{ election.description }}</h1>
+      <p>{{ election.votingStatus }}</p>
+      <div class="fechas">
+        <p>{{ election.date }}</p>
+      </div>
+    </div>
   </div>
 </div>
 
-<div class="main-content" *ngIf="!estado">
+<div class="main-content" *ngIf="pastElections.length == 0">
   <h1>Votaciones Pasadas</h1>
 
   <div class="fila-carta">
