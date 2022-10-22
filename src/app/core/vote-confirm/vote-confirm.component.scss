@@ -12,12 +12,35 @@
   p {
     font-size: 1.5rem;
   }
+
   .text {
+    position: relative;
     a {
       text-transform: capitalize;
       font-weight: bold;
     }
     display: flex;
+    align-items: center;
+    justify-content: center;
+    clear: both;
+    .vote-confirm-text {
+      z-index: 1;
+      position: absolute;
+      top: 50%; /* position the top  edge of the element at the middle of the parent */
+      left: 50%; /* position the left edge of the element at the middle of the parent */
+      transform: translate(-50%, -0%);
+    }
+    .vote-confirm-qr {
+      display: flex;
+      position: absolute;
+      height: 100%;
+      width: auto;
+      z-index: 0;
+      top: 50%; /* position the top  edge of the element at the middle of the parent */
+      left: 50%; /* position the left edge of the element at the middle of the parent */
+
+      transform: translate(-50%, -50%);
+    }
   }
   .buttons {
     p {

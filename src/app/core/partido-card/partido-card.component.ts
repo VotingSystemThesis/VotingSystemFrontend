@@ -23,8 +23,8 @@ export class PartidoCardComponent implements OnInit {
   vote() {
     this.dialog
       .open(VoteConfirmComponent, {
-        width: '30vw',
-        height: '50vh',
+        width: '40vw',
+        height: '60vh',
         data: {
           personToVote: this.candidato,
           electionId: this.electionId,
