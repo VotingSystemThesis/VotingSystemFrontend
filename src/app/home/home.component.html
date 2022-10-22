@@ -3,8 +3,11 @@
   <div class="welcome-container">
     <h1>Bienvenido a VotingSystem</h1>
     <p>
-      Seleccione la opción el cual desea realizar su <br />
-      Voto
+      {{
+        actualElections?.length! > 0
+          ? "Seleccione la opción el cual desea realizar su Voto "
+          : "No tiene votaciones disponibles "
+      }}
     </p>
     <app-voting-card
       *ngFor="let election of actualElections"
